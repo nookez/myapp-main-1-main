@@ -1,0 +1,13 @@
+{% load static %}
+<div class="mb-8">
+    <h2 class="text-2xl font-bold text-red-600 mb-4">Top news</h2>
+    <div class="flex overflow-x-auto space-x-4 pb-4">
+        {% for i in "123456" %}
+        <div class="relative w-32">
+            <a href="{% url 'movie_detail' i %}" class="block">
+                <img src="{% static 'images/POSTER'|add:i|add:'.png' %}" alt="News {{ i }}" class="w-full h-auto">
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>

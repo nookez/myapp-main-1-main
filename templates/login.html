@@ -1,0 +1,27 @@
+{% extends '_base.html' %}
+
+{% block title %}Login - Movie Review{% endblock %}
+
+{% block content %}
+{% comment %} <h1 class="text-4xl font-bold mb-4 text-center">Login</h1>
+<form method="post" class="max-w-md mx-auto">
+    {% csrf_token %}
+    <div class="mb-4">
+        <label class="block text-lg mb-2">Username</label>
+        <input type="text" name="username" class="p-2 w-full border border-gray-300 rounded text-black">
+    </div>
+    <div class="mb-4">
+        <label class="block text-lg mb-2">Password</label>
+        <input type="password" name="password" class="p-2 w-full border border-gray-300 rounded text-black">
+    </div>
+    <button type="submit" class="bg-red-600 text-white p-2 w-full">Login</button>
+</form> {% endcomment %}
+
+<h1 class="text-4xl font-bold mb-4 text-center">Login</h1>
+<form method="post" class="max-w-md mx-auto">
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- ใช้ Django form object เพื่อแสดงฟอร์ม -->
+    <button type="submit" class="bg-red-600 text-white p-2 w-full">Login</button>
+</form>
+
+{% endblock %}

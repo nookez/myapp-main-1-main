@@ -1,0 +1,35 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}{{ movie.title }}{% endblock %}
+
+{% block content %}
+<div class="container mx-auto p-8">
+    <div class="bg-gray-100 rounded-lg shadow-md p-6">
+        <h1 class="text-4xl font-extrabold mb-6">{{ movie.title }}</h1>
+        <div class="flex flex-col lg:flex-row">
+            <!-- Poster -->
+            <div class="lg:w-1/3 mb-6 lg:mb-0">
+                <img src="{% static 'images/' %}{{ movie.poster }}" alt="{{ movie.title }}" class="w-full h-auto rounded-lg shadow-lg">
+            </div>
+            <!-- Description -->
+            <div class="lg:w-2/3 lg:pl-8">
+                <p class="text-lg leading-relaxed mb-4">{{ movie.description }}</p>
+                <!-- Additional Information -->
+                <div class="mt-4">
+                    <h2 class="text-2xl font-semibold mb-2">More About This Movie</h2>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Release Date:</strong> {{ movie.release_date }}</li>
+                        <li><strong>Director:</strong> {{ movie.director }}</li>
+                        <li><strong>Genre:</strong> {{ movie.genre }}</li>
+                    </ul>
+                </div>
+                <!-- Placeholder for additional content -->
+                <div class="mt-8">
+                    <!-- Include additional sections or information here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
