@@ -7,3 +7,6 @@ class UserLogin(models.Model):
     def __str__(self):
         return self.username
 
+# models.py
+from django.db import models
+
