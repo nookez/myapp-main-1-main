@@ -21,7 +21,7 @@ def toppick(request, id):
     movies = {
         1: {'title': 'Movie 1', 'description': 'รายละเอียดของ Movie 1', 'poster': 'POSTER1.png'},
         2: {'title': 'Movie 2', 'description': 'รายละเอียดของ Movie 2', 'poster': 'POSTER2.png'},
-        3: {'title': 'Movie 3', 'description': 'รายละเอียดของ Movie 3', 'poster': 'POSTER3.png'},
+        3: {'title': 'Moonfall', 'description': 'รายละเอียดของ Movie 3', 'poster': 'POSTER3.png'},
         4: {'title': 'Movie 4', 'description': 'รายละเอียดของ Movie 4', 'poster': 'POSTER4.png'},
         5: {'title': 'Movie 5', 'description': 'รายละเอียดของ Movie 5', 'poster': 'POSTER5.png'},
         6: {'title': 'Movie 6', 'description': 'รายละเอียดของ Movie 6', 'poster': 'POSTER6.png'},
